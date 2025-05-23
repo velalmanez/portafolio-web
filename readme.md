@@ -9,5 +9,4 @@
 ## 🚀 Tecnologías Utilizadas
 
 - ⚡ **HTML5**, **CSS3**
-- ⚛️ **Angular** (Frontend framework)
 - 🎨 **Bootstrap** (Diseño responsivo)
