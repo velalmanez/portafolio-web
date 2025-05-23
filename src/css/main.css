@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;4000;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color:#383939;
+    --second-bg-color:#5d5f5f;
+    --text-color:#fff;
+    --main-color:#38c958;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height:100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* ESTILO DE NAVBAR */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+
+.navbar .navbar-brand{
+    color: var(--main-color);
+    font-size: 3rem;
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+
+.navbar-nav a{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+.navbar-toggler{
+    border-color: var(--main-color);
+    padding: 1rem; 
+}
+
+.navbar-toggler i{
+  color: var(--main-color);
+}
+
+
+/* ESTILO DE INDEX.HTML */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--main-color);
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+.social-media a{
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+/* ESTILO DE ABOUT.HMTL */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--second-bg-color);
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content .body-title{
+    font-size: 3.5rem;
+}
+
+
+.about-content .body .btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.about-content .body .btn:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+
+}
+
+
+.about-content span{
+    color: var(--main-color);
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+.about-content p{
+    text-align: justify;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+
+}
+
+
+/* ESTILO DE PORTFOLIO.HTML */
+.portfolio h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 1.4rem var(--main-color);
+}
+
+.card{
+    background-color: var(--second-bg-color);
+    border-color: var(--main-color);
+}
+
+
+.card-content{
+    color: black;
+}
+
+.card-title{
+    color: var(--main-color);
+    text-shadow: 0 0 1.4rem var(--main-color);
+    font-size: 2.3rem;
+}
+
+.card-text{
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+
+/* ESTILO DE CONTACTO.HTML */
+.form-content{
+    background-color: var(--second-bg-color);
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.contacto h2{
+    text-align: center;
+    font-size: 3rem
+}
+
+.contacto h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 1.4rem var(--main-color);
+}
+
+.contacto label{
+    font-size: 17px;
+}
+
+.contacto .form-control{
+    color: var(--main-color);
+    padding: 17px 14px;
+    background-color: var(--bg-color);
+    border: 0;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.form-control:focus{
+    outline: 2px solid #38c958;
+}
+
+
+/* ESTILO DE SUBMIT.HTML */
+.submit-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.submit-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--main-color);
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+
+/* ESTILO DE BOTONES */
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+}
