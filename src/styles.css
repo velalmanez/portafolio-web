@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --bg-color:#383939;
+    --second-bg-color:#5d5f5f;
+    --text-color:#fff;
+    --main-color:#38c958;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    min-height:100vh;
+    padding: 10rem 9% 2rem;
+}
