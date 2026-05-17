@@ -1,0 +1,53 @@
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--second-bg-color);
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content .body-title{
+    font-size: 3.5rem;
+}
+
+
+.about-content .body .btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.about-content .body .btn:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+
+}
+
+
+.about-content span{
+    color: var(--main-color);
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+.about-content p{
+    text-align: justify;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+
+}
