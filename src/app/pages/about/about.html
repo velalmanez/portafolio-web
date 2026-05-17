@@ -1,1 +1,33 @@
-<p>about works!</p>
+<div class="containner-sm">
+    <section class="about" id="about">
+
+        <div class="about-content">
+            <h2 class="heading">Acerca de <span>mi</span></h2>
+            <p> Comencé en el mundo del desarrllo web por curiosidad y mas adelante, gracias a un curso intersemestral
+                de la univeridad, tuve la oportunidad de aprender más a detalle sobre este tema desarrollando web con
+                pequeños proyectos utilizando solo HTML5 <i class="fa-brands fa-html5"></i>, CSS <i class="fa-brands fa-css3"></i> y JS <i class="fa-brands fa-js"></i>, posteriormente tuve la oportunidad de aprender SQL y PHP <i class="fa-brands fa-php"></i> para 
+                implementarlos en conjunto y desarrollar una App Web que hace un CRUD en una base de datos. <br><br> Actualmente me encuentro cursando la carrera de Ingeniería en Computación en la UNAM y busco ampliar mi experiencia en el
+                campo laboral del mundo del desarrollo web y bases de datos.</p>
+           
+           <div class="body">
+              <h2 class="body-title"><span>Formación</span> académica</h2>
+              <br>
+              <div class="row">
+                    @for (certificado of certificados; track certificado.title) {
+                        <div class="col-sm-6 mb-3 d-flex">
+                            <div class="card h-100 w-100">
+                                <div class="card-body">
+                                <h5 class="card-title">{{ certificado.title }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ certificado.institution }}</h6>
+                                <p class="card-text">{{ certificado.description }}</p>
+                                <p class="card-text"><small class="text-muted">{{ certificado.date }}</small></p>
+                                <a href="{{ certificado.link }}" target="_blank" class="btn mt-auto">Ver constancia</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+               </div>
+            </div>
+        </div>
+   </section>
+</div>
