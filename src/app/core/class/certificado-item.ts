@@ -4,4 +4,5 @@ export interface CertificadoItem {
     date: string;
     description: string;
     link?: string;
+    imageUrl?: string;
 }

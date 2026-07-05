@@ -1,17 +1,36 @@
-<div class="containner-sm">
+<div class="containner-sm">    
     <section class="home" id="home">
         <div class="home-content">
-            <h3>¡Hola!, soy</h3>
-            <h1>Ivan Velazquez</h1>
-            <h3>Bienvenidx a mi portfolio de Full Stack Developer</h3>
-
-            <div class="social-media">
-                <a [href]="linkedinUrl" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a [href]="githubUrl" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a [href]="instagramUrl" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ urlAvatar }}" alt="Ivan Velazquez" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6 justify-content-center d-flex flex-column">
+                    <h3>¡Hola!, soy</h3>
+                    <h1>Ivan Velazquez</h1>
+                    <h3>Bienvenid@ a mi portafolio</h3>
+                    <div class="home-roles lead">
+                        <span class="multiple-text">
+                            Soy <span class="text-green">Ingeniero en Computación </span> y <span class="text-green">Desarrollador Full Stack</span>
+                            apasionado por la creación de aplicaciones web modernas, funcionales y escalables.
+                            <br>
+                            Me especializo en tecnologías como Angular, C#, .NET y Go, desarrollando soluciones que combinan una experiencia de usuario intuitiva 
+                            con un backend sólido y eficiente. Además, cuento con experiencia trabajando con bases de datos MySQL, SQL Server, Oracle y PostgreSQL, 
+                            así como en entornos de desarrollo ágiles bajo metodologías Scrum y Kanban. 
+                            <br> <br>
+                            Disfruto enfrentar nuevos retos tecnológicos, aprender constantemente 
+                            y construir software que resuelva problemas reales y aporte valor a las organizaciones y a sus usuarios.
+                        </span>
+                    </div>
+                    <br>
+                <hr>
+                <div class="social-media">
+                    <a [href]="linkedinUrl" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a [href]="githubUrl" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a [href]="cvUrl" class="btn" download="{{ fuileNameDownloadCV }}">Descarga mi CV</a>
+                </div>
             </div>
-
-            <a [href]="cvUrl" class="btn" download="Curriculum_Velazauez_Arriaga_Aleks.pdf">Descarga mi CV</a>
         </div>
-   </section>
-  </div>
+    </section>
+</div>

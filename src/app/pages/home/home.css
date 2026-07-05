@@ -57,3 +57,17 @@
 .btn:hover{
     box-shadow: 0 0 2rem var(--main-color);
 }
+
+.multiple-text{
+    display: block;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.text-green{
+    color: var(--main-color);
+    font-weight: 600;
+}
