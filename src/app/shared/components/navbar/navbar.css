@@ -25,9 +25,14 @@
 }
 
 .navbar a:hover,
-.navbar a.active{
-    color: var(--main-color);
-    text-shadow: 0 0 1rem var(--main-color);
+.navbar a.active {
+    color: var(--primary-color);
+    text-shadow: 0 0 1rem var(--primary-color);
+}
+
+.navbar a.active {
+    border-bottom: .2rem solid var(--primary-color);
+    text-shadow: 0 0 1rem var(--primary-color);
 }
 
 .navbar-toggler{

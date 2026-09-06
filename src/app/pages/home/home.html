@@ -1,36 +1,202 @@
-<div class="containner-sm">    
-    <section class="home" id="home">
-        <div class="home-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="{{ urlAvatar }}" alt="Ivan Velazquez" class="img-fluid rounded-circle">
-                </div>
-                <div class="col-md-6 justify-content-center d-flex flex-column">
-                    <h3>¡Hola!, soy</h3>
-                    <h1>Ivan Velazquez</h1>
-                    <h3>Bienvenid@ a mi portafolio</h3>
-                    <div class="home-roles lead">
-                        <span class="multiple-text">
-                            Soy <span class="text-green">Ingeniero en Computación </span> y <span class="text-green">Desarrollador Full Stack</span>
-                            apasionado por la creación de aplicaciones web modernas, funcionales y escalables.
-                            <br>
-                            Me especializo en tecnologías como Angular, C#, .NET y Go, desarrollando soluciones que combinan una experiencia de usuario intuitiva 
-                            con un backend sólido y eficiente. Además, cuento con experiencia trabajando con bases de datos MySQL, SQL Server, Oracle y PostgreSQL, 
-                            así como en entornos de desarrollo ágiles bajo metodologías Scrum y Kanban. 
-                            <br> <br>
-                            Disfruto enfrentar nuevos retos tecnológicos, aprender constantemente 
-                            y construir software que resuelva problemas reales y aporte valor a las organizaciones y a sus usuarios.
-                        </span>
+<main class="home-page">
+    <div id="portfolio-scrollspy" data-bs-spy="scroll" data-bs-target="#portfolio-navbar"
+        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+        <section id="inicio" class="portfolio-section hero-section" aria-labelledby="home-title">
+            <div class="section-grid hero-grid">
+                <div>
+                    <p class="status-pill"><span></span> INGENIERO EN COMPUTACIÓN &amp; FULL STACK DEVELOPER</p>
+                    <p class="eyebrow">Hola, soy</p>
+                    <h1 id="home-title">Aleks Ivan<br>Velazquez Arriaga</h1>
+                    <p class="intro">Ingeniero en Computación con más de 2 años de experiencia desarrollando
+                        aplicaciones empresariales utilizando <strong>.NET, Angular, SQL Server y Go</strong>.
+                        Especializado en modernización de sistemas legacy, backend de alto rendimiento, infraestructura
+                        Linux/Docker e integración de soluciones avanzadas con <span class="highlight">Inteligencia
+                            Artificial (LangChain y LangGraph).</span></p>
+                    <div class="action-row">
+                        <a class="button button-primary" href="#proyectos">Ver proyectos <span
+                                aria-hidden="true">&#8594;</span></a>
+                        <a class="button button-secondary" [href]="cvUrl" [download]="fuileNameDownloadCV">Descargar CV
+                            PDF
+                        </a>
+                        <div class="social-media" aria-label="Redes sociales">
+                            <a [href]="githubUrl" aria-label="Perfil de GitHub" rel="noopener noreferrer"
+                                target="_blank">GH</a>
+                            <a [href]="linkedinUrl" aria-label="Perfil de LinkedIn" rel="noopener noreferrer"
+                                target="_blank">in</a>
+                        </div>
                     </div>
-                    <br>
-                <hr>
-                <div class="social-media">
-                    <a [href]="linkedinUrl" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a [href]="githubUrl" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a [href]="cvUrl" class="btn" download="{{ fuileNameDownloadCV }}">Descarga mi CV</a>
+                <div class="terminal-card" aria-label="Resumen de tecnologias">
+
+                    <div class="terminal-bar">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full"></div>
+                            <div class="w-3 h-3 rounded-full"></div>
+                            <div class="w-3 h-3 rounded-full"></div>
+                        </div>
+                        <span>aleks@arch-node: ~/runtime</span>
+                        <span aria-hidden="true">&gt;_</span>
+                    </div>
+                    <div class="terminal-content">
+                        <p><b>$</b> whoami --full</p>
+                        <p class="terminal-name">Aleks Ivan Velazquez <span>• Active Engineer</span></p>
+                        <p><b>$</b> architecture-query --stack</p>
+                        <div class="terminal-output">
+                            <p><strong>backend:</strong> [.NET Core, Go, Nest.JS, REST]</p>
+                            <p><strong>database:</strong> [SQL Server, PostgreSQL, SP Tuning]</p>
+                            <p><strong>ai_agents:</strong> [LangChain, LangGraph, RAG Flow]</p>
+                            <p><strong>cloud_ops:</strong> [Linux Server, Docker, CI/CD]</p>
+                        </div>
+                        <p class="status-ok">&#10003; System status: 100% operational</p>
+                    </div>
+                    <div class="stats-grid">
+                        <article><strong>+2</strong><span>Anos de experiencia</span></article>
+                        <article><strong>UNAM</strong><span>Ing. Computacion</span></article>
+                        <article><strong>Full Stack</strong><span>&amp; AI Core</span></article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+
+        <section id="experiencia" class="portfolio-section" aria-labelledby="experience-title">
+            <p class="section-kicker">01 / TRAYECTORIA TECNICA</p>
+            <h2 id="experience-title">Experiencia laboral</h2>
+            <div class="timeline">
+                <article class="content-card timeline-item"><span class="timeline-dot"></span>
+                    <div class="card-heading">
+                        <div>
+                            <h3>Grupo Financiero Inbursa</h3>
+                            <p class="role">Systems Analyst · Estado de Mexico</p>
+                        </div><time>Marzo 2026 - Actualidad</time>
+                    </div>
+                    <p>Desarrollo de soluciones digitales empresariales, automatizacion de encuestas y reportes
+                        analiticos. Modernizacion de aplicaciones core con C# y .NET bajo mejora continua.</p>
+                    <div class="tags"><span>.NET</span><span>C#</span><span>SQL Server</span><span>Kaizen</span></div>
+                </article>
+                <article class="content-card timeline-item"><span class="timeline-dot"></span>
+                    <div class="card-heading">
+                        <div>
+                            <h3>Grupo Exux</h3>
+                            <p class="role">Full Stack Developer · Consultoria tecnologica</p>
+                        </div><time>Marzo 2024 - Febrero 2026</time>
+                    </div>
+                    <p>Desarrollo de sistemas corporativos escalables, optimizacion de SQL Server y migracion hacia
+                        Angular, Nest.JS y APIs desacopladas.</p>
+                    <div class="tags"><span>Angular</span><span>Nest.JS</span><span>ASP.NET</span><span>SQL
+                            Server</span><span>Scrum</span></div>
+                </article>
+                <article class="content-card timeline-item"><span class="timeline-dot"></span>
+                    <div class="card-heading">
+                        <div>
+                            <h3>IIMAS - UNAM</h3>
+                            <p class="role">Full Stack Developer · Investigacion universitaria</p>
+                        </div><time>Enero 2025 - Julio 2025</time>
+                    </div>
+                    <p>Plataforma web desacoplada para gestion documental, autenticacion RBAC e integracion entre
+                        Angular y microservicios de baja latencia en Go.</p>
+                    <div class="tags"><span>Go</span><span>Angular</span><span>RBAC</span><span>REST APIs</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="proyectos" class="portfolio-section" aria-labelledby="projects-title">
+            <p class="section-kicker">02 / PORTAFOLIO DE PRODUCCION</p>
+            <h2 id="projects-title">Proyectos &amp; arquitectura</h2>
+            <div class="cards-grid three-columns">
+                <article class="content-card project-card"><span class="project-label">DESKTOP &amp; WEB APP</span>
+                    <h3>Gym Management Platform</h3>
+                    <p>Sistema de administracion para clientes, membresias, pagos y seguimiento deportivo.</p>
+                    <div class="tags"><span>Go</span><span>Angular</span><span>PostgreSQL</span><span>Wails</span></div>
+                    <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Codigo en GitHub &#8599;</a>
+                </article>
+                <article class="content-card project-card"><span class="project-label violet">AI ENGINEERING /
+                        RAG</span>
+                    <h3>Agentes de IA generativa</h3>
+                    <p>Agentes autonomos con memoria persistente, tool calling y flujos RAG orquestados con LangChain y
+                        LangGraph.</p>
+                    <div class="tags violet-tags">
+                        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>RAG</span>
+                    </div><a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Repositorio &#8599;</a>
+                </article>
+                <article class="content-card project-card"><span class="project-label green">DEVOPS &amp;
+                        HARDENING</span>
+                    <h3>Infraestructura Linux</h3>
+                    <p>Servidores Ubuntu con Nginx, Docker Compose, CI/CD automatizado, UFW y llaves SSH.</p>
+                    <div class="tags green-tags"><span>Ubuntu</span><span>Docker</span><span>Nginx</span><span>GitHub
+                            Actions</span></div><a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Workflow
+                        &#8599;</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="portfolio-section" aria-labelledby="skills-title">
+            <p class="section-kicker">03 / STACK TECNOLOGICO</p>
+            <h2 id="skills-title">Competencias tecnicas</h2>
+            <div class="cards-grid skills-grid">
+                <article class="content-card">
+                    <h3>Backend &amp; lenguajes</h3>
+                    <div class="tags">
+                        <span>C#</span><span>TypeScript</span><span>Go</span><span>Python</span><span>ASP.NET
+                            Core</span><span>Nest.JS</span><span>REST APIs</span>
+                    </div>
+                </article>
+                <article class="content-card">
+                    <h3>Frontend &amp; UI</h3>
+                    <div class="tags">
+                        <span>Angular</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>Angular
+                            Material</span>
+                    </div>
+                </article>
+                <article class="content-card">
+                    <h3>Bases de datos</h3>
+                    <div class="tags"><span>SQL
+                            Server</span><span>Oracle</span><span>PostgreSQL</span><span>MySQL</span><span>Query
+                            Optimization</span></div>
+                </article>
+                <article class="content-card">
+                    <h3>DevOps e infraestructura</h3>
+                    <div class="tags green-tags"><span>Docker</span><span>Linux</span><span>Nginx</span><span>GitHub
+                            Actions</span><span>UFW</span></div>
+                </article>
+                <article class="content-card wide-card">
+                    <h3>IA &amp; agentes inteligentes</h3>
+                    <div class="tags violet-tags">
+                        <span>LangChain</span><span>LangGraph</span><span>RAG</span><span>Prompt
+                            Engineering</span><span>LLM Tool Calling</span><span>Vector Embeddings</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="educacion" class="portfolio-section" aria-labelledby="education-title">
+            <p class="section-kicker">04 / ACREDITACION Y FORMACION</p>
+            <h2 id="education-title">Educacion &amp; certificaciones</h2>
+            <div class="cards-grid education-grid">
+                <article class="content-card">
+                    <h3>Ingenieria en Computacion</h3>
+                    <p class="highlight">Universidad Nacional Autonoma de Mexico (UNAM)</p>
+                    <p>Facultad de Ingenieria · Periodo 2021 - 2025</p>
+                    <hr>
+                    <p>Formacion en estructuras de datos, compiladores, redes, sistemas operativos y arquitectura
+                        distribuida.</p>
+                </article>
+                <article class="content-card">
+                    <h3>Certificaciones oficiales</h3>
+                    <div class="certificate-list"><span>Relational Database Systems</span><span>AWS S3
+                            Basics</span><span>Oracle Database Foundations</span><span>Generative AI in Education</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="portfolio-section contact-section" aria-labelledby="contact-title">
+            <p class="section-kicker">05 / INICIEMOS CONVERSACION</p>
+            <h2 id="contact-title">Construyamos algo util y escalable.</h2>
+            <p>Disponible para roles Full Stack, backend de alto rendimiento, orquestacion de IA y consultoria tecnica.
+            </p>
+            <div class="contact-links"><a href="mailto:velalmanez@gmail.com">velalmanez@gmail.com</a><a
+                    href="https://wa.me/525637883349" target="_blank" rel="noopener noreferrer">WhatsApp · +52 56 3788
+                    3349</a><span>Estado de Mexico, Mexico</span></div>
+        </section>
+    </div>
+</main>

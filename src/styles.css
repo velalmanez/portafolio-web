@@ -14,10 +14,13 @@
 }
 
 :root{
-    --bg-color:#383939;
-    --second-bg-color:#5d5f5f;
+    --bg-color:#101729;
+    --secondary-bg-color:#1e2633;
     --text-color:#fff;
-    --main-color:#38c958;
+    --primary-color:#10B981;
+    --secondary-color:#34D399;
+    --tertiary-color:#059669;
+    --neutral-color:#9CA3AF;
 }
 
 html{
