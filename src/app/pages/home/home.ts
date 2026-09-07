@@ -5,10 +5,11 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TerminalCard } from '../../shared/components/terminal-card/terminal-card';
 import { StatsGrid } from '../../shared/components/stats-grid/stats-grid';
+import { ExperienceTimeline } from '../../shared/components/experience-timeline/experience-timeline';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid],
+  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid, ExperienceTimeline],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

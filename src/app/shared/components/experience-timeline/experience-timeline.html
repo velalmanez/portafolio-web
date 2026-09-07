@@ -1,0 +1,20 @@
+<div class="timeline" aria-label="Trayectoria profesional">
+    @for (experience of experiences; track experience.company) {
+        <article class="experience-card" [class.current-experience]="experience.isCurrent">
+            <span class="timeline-dot" [class.current-dot]="experience.isCurrent" aria-hidden="true"></span>
+            <div class="card-heading">
+                <div>
+                    <h3>{{ experience.company }}</h3>
+                    <p class="role">{{ experience.role }} · {{ experience.location }}</p>
+                </div>
+                <time>{{ experience.period }}</time>
+            </div>
+            <p class="description">{{ experience.description }}</p>
+            <div class="tags" aria-label="Tecnologías utilizadas">
+                @for (technology of experience.technologies; track technology) {
+                    <span>{{ technology }}</span>
+                }
+            </div>
+        </article>
+    }
+</div>

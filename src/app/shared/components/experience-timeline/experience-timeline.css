@@ -1,0 +1,140 @@
+.timeline {
+    display: grid;
+    gap: 2rem;
+    border-left: 2px solid var(--tertiary-color);
+    padding-left: 2.5rem;
+}
+
+.experience-card {
+    position: relative;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1.2rem;
+    background: var(--secondary-bg-color);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+    transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.experience-card:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 1.5rem 4rem rgba(16, 185, 129, .12);
+    transform: translateY(-.2rem);
+}
+
+.current-experience {
+    border-color: var(--primary-color);
+    box-shadow: 0 1.5rem 4rem rgba(16, 185, 129, .16);
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 2rem;
+    left: -3.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    background: var(--bg-color);
+    box-shadow: 0 0 1rem rgba(52, 211, 153, .45);
+}
+
+.current-dot {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    box-shadow: 0 0 0 .5rem rgba(16, 185, 129, .18), 0 0 1.5rem var(--primary-color);
+    animation: current-dot-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes current-dot-pulse {
+    0%,
+    100% {
+        opacity: .72;
+        transform: scale(.9);
+        box-shadow: 0 0 0 .4rem rgba(16, 185, 129, .14), 0 0 .9rem var(--primary-color);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.12);
+        box-shadow: 0 0 0 .7rem rgba(16, 185, 129, .22), 0 0 1.8rem var(--primary-color);
+    }
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-heading h3 {
+    margin: 0 0 .5rem;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.role,
+time {
+    margin: 0;
+    color: var(--secondary-color);
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+}
+
+.current-experience .role,
+.current-experience time {
+    color: var(--primary-color);
+}
+
+time {
+    white-space: nowrap;
+}
+
+.description {
+    margin: 1.5rem 0 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    line-height: 1.65;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-top: 1.5rem;
+    font-family: 'Courier New', monospace;
+}
+
+.tags span {
+    padding: .5rem .9rem;
+    border: 1px solid rgba(52, 211, 153, .35);
+    border-radius: 99rem;
+    color: var(--secondary-color);
+    background: rgba(52, 211, 153, .1);
+    font-size: 1.1rem;
+}
+
+.current-experience .tags span {
+    border-color: rgba(16, 185, 129, .45);
+    color: var(--primary-color);
+    background: rgba(16, 185, 129, .12);
+}
+
+@media (max-width: 520px) {
+    .card-heading {
+        flex-direction: column;
+        gap: .8rem;
+    }
+
+    time {
+        white-space: normal;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .current-dot {
+        animation: none;
+    }
+}
