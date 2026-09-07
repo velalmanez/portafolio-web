@@ -1,0 +1,74 @@
+.terminal-card,
+.content-card {
+    border: 1px solid #26364d;
+    border-radius: 1.2rem;
+    background: var(--secondary-bg-color);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+}
+
+.terminal-card {
+    padding: 1.6rem;
+    height: 40rem;
+}
+
+.terminal-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #26364d;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+.dots-container {
+    display: flex;
+    gap: .5rem;
+}
+.terminal-dot-white{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
+}
+
+.terminal-dot-green {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.terminal-content {
+    padding-top: 1.4rem;
+    color: #94a3b8;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.terminal-content p {
+    margin: .5rem 0;
+}
+
+.terminal-content b,
+.terminal-output strong {
+    color: var(--secondary-color);
+}
+
+.terminal-name {
+    color: var(--text-color);
+}
+
+.terminal-name span,
+.status-ok {
+    color: var(--primary-color);
+}
+
+.terminal-output {
+    margin: 1rem 0;
+    padding: .8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background: var(--bg-color);
+}

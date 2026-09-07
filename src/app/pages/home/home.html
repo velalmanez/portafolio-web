@@ -13,47 +13,24 @@
                         Linux/Docker e integración de soluciones avanzadas con <span class="highlight">Inteligencia
                             Artificial (LangChain y LangGraph).</span></p>
                     <div class="action-row">
-                        <a class="button button-primary" href="#proyectos">Ver proyectos <span
-                                aria-hidden="true">&#8594;</span></a>
+                        <a class="button button-primary" href="#proyectos">Ver proyectos
+                            <span aria-hidden="true" class="arrow-icon">&#8594;
+                            </span>
+                        </a>
                         <a class="button button-secondary" [href]="cvUrl" [download]="fuileNameDownloadCV">Descargar CV
                             PDF
                         </a>
                         <div class="social-media" aria-label="Redes sociales">
                             <a [href]="githubUrl" aria-label="Perfil de GitHub" rel="noopener noreferrer"
-                                target="_blank">GH</a>
+                                target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
                             <a [href]="linkedinUrl" aria-label="Perfil de LinkedIn" rel="noopener noreferrer"
-                                target="_blank">in</a>
+                                target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="terminal-card" aria-label="Resumen de tecnologias">
-
-                    <div class="terminal-bar">
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 rounded-full"></div>
-                            <div class="w-3 h-3 rounded-full"></div>
-                            <div class="w-3 h-3 rounded-full"></div>
-                        </div>
-                        <span>aleks@arch-node: ~/runtime</span>
-                        <span aria-hidden="true">&gt;_</span>
-                    </div>
-                    <div class="terminal-content">
-                        <p><b>$</b> whoami --full</p>
-                        <p class="terminal-name">Aleks Ivan Velazquez <span>• Active Engineer</span></p>
-                        <p><b>$</b> architecture-query --stack</p>
-                        <div class="terminal-output">
-                            <p><strong>backend:</strong> [.NET Core, Go, Nest.JS, REST]</p>
-                            <p><strong>database:</strong> [SQL Server, PostgreSQL, SP Tuning]</p>
-                            <p><strong>ai_agents:</strong> [LangChain, LangGraph, RAG Flow]</p>
-                            <p><strong>cloud_ops:</strong> [Linux Server, Docker, CI/CD]</p>
-                        </div>
-                        <p class="status-ok">&#10003; System status: 100% operational</p>
-                    </div>
-                    <div class="stats-grid">
-                        <article><strong>+2</strong><span>Anos de experiencia</span></article>
-                        <article><strong>UNAM</strong><span>Ing. Computacion</span></article>
-                        <article><strong>Full Stack</strong><span>&amp; AI Core</span></article>
-                    </div>
+                <div>
+                    <app-terminal-card></app-terminal-card>
+                    <app-stats-grid></app-stats-grid>
                 </div>
             </div>
         </section>

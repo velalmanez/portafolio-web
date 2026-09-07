@@ -26,7 +26,8 @@ export const CONSTANTS = {
   },
   TEXTOS:
   {
-    FILE_NAME_DOWNLOAD_CV: "Curriculum_Velazauez_Arriaga_Aleks.pdf"
+    FILE_NAME_DOWNLOAD_CV: "Curriculum_Velazauez_Arriaga_Aleks.pdf",
+    NOMBRE_COMPLETO: "Aleks Ivan Velazquez Arriaga",
   }
 
 };

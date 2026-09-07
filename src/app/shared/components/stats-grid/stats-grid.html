@@ -1,0 +1,14 @@
+<div class="stats-grid" aria-label="Resumen profesional">
+    @for (slides of statSlides; track $index) {
+        <article>
+            <div class="stat-viewport">
+                @for (slide of [slides[currentSlide()[$index]]]; track slide.value) {
+                    <div class="stat-content">
+                        <strong>{{ slide.value }}</strong>
+                        <span>{{ slide.label }}</span>
+                    </div>
+                }
+            </div>
+        </article>
+    }
+</div>

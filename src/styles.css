@@ -14,13 +14,15 @@
 }
 
 :root{
-    --bg-color:#101729;
+    --bg-color:#0b1117;
     --secondary-bg-color:#1e2633;
     --text-color:#fff;
     --primary-color:#10B981;
     --secondary-color:#34D399;
     --tertiary-color:#059669;
     --neutral-color:#9CA3AF;
+    --text-color-2:#000000;
+    --border-color:#3f4042;
 }
 
 html{

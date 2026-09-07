@@ -3,10 +3,12 @@ import { CONSTANTS } from '../../shared/constants/constants';
 import { Navbar } from '../../shared/components/navbar/navbar';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TerminalCard } from '../../shared/components/terminal-card/terminal-card';
+import { StatsGrid } from '../../shared/components/stats-grid/stats-grid';
 
 @Component({
   selector: 'app-home',
-  imports: [Navbar, CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
