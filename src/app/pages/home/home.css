@@ -203,8 +203,7 @@ p {
     margin-top: 1.5rem;
 }
 
-.tags span,
-.project-label {
+.tags span {
     padding: .5rem .9rem;
     border: 1px solid rgba(56, 189, 248, .3);
     border-radius: 99rem;
@@ -213,47 +212,10 @@ p {
     font-size: 1.1rem;
 }
 
-.project-label {
-    display: inline-block;
-    border-radius: .4rem;
-    font-weight: 700;
-}
-
-.violet,
-.violet-tags span {
-    color: #c4b5fd;
-    border-color: rgba(139, 92, 246, .35);
-    background: rgba(139, 92, 246, .1);
-}
-
-.green,
-.green-tags span {
-    color: #6ee7b7;
-    border-color: rgba(16, 185, 129, .35);
-    background: rgba(16, 185, 129, .1);
-}
-
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 28rem;
-}
-
-.project-card h3 {
-    margin-top: 2rem;
-}
-
-.project-card a {
-    margin-top: auto;
-    color: #7dd3fc;
-    font-size: 1.3rem;
-    font-weight: 700;
 }
 
 .skills-grid {

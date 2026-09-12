@@ -1,0 +1,13 @@
+<article class="project-card" [class]="variantClass">
+    <span class="project-label" [class]="variantClass">{{ project.label }}</span>
+    <h3>{{ project.title }}</h3>
+    <p class="description">{{ project.description }}</p>
+    <div class="tags" [class]="tagsVariantClass" aria-label="Tecnologías utilizadas">
+        @for (technology of project.technologies; track technology) {
+            <span>{{ technology }}</span>
+        }
+    </div>
+    @if (project.githubUrl) {
+        <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="github-link">{{ project.textUrl || 'Código en GitHub' }} &#8599;</a>
+    }
+</article>

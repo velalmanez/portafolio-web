@@ -17,7 +17,7 @@ export class Navbar {
     { label: 'Experiencia', route: '#experiencia' },
     { label: 'Proyectos', route: '#proyectos' },
     { label: 'Skills', route: '#skills' },
-    { label: 'Educacion', route: '#educacion' },
+    { label: 'Educación', route: '#educacion' },
     { label: 'Contacto', route: '#contacto' }
   ];
 

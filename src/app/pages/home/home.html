@@ -45,29 +45,9 @@
             <p class="section-kicker">02 / PORTAFOLIO DE PRODUCCION</p>
             <h2 id="projects-title">Proyectos &amp; arquitectura</h2>
             <div class="cards-grid three-columns">
-                <article class="content-card project-card"><span class="project-label">DESKTOP &amp; WEB APP</span>
-                    <h3>Gym Management Platform</h3>
-                    <p>Sistema de administracion para clientes, membresias, pagos y seguimiento deportivo.</p>
-                    <div class="tags"><span>Go</span><span>Angular</span><span>PostgreSQL</span><span>Wails</span></div>
-                    <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Codigo en GitHub &#8599;</a>
-                </article>
-                <article class="content-card project-card"><span class="project-label violet">AI ENGINEERING /
-                        RAG</span>
-                    <h3>Agentes de IA generativa</h3>
-                    <p>Agentes autonomos con memoria persistente, tool calling y flujos RAG orquestados con LangChain y
-                        LangGraph.</p>
-                    <div class="tags violet-tags">
-                        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>RAG</span>
-                    </div><a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Repositorio &#8599;</a>
-                </article>
-                <article class="content-card project-card"><span class="project-label green">DEVOPS &amp;
-                        HARDENING</span>
-                    <h3>Infraestructura Linux</h3>
-                    <p>Servidores Ubuntu con Nginx, Docker Compose, CI/CD automatizado, UFW y llaves SSH.</p>
-                    <div class="tags green-tags"><span>Ubuntu</span><span>Docker</span><span>Nginx</span><span>GitHub
-                            Actions</span></div><a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Workflow
-                        &#8599;</a>
-                </article>
+                @for (project of projects; track project.title) {
+                    <app-project-card [project]="project"></app-project-card>
+                }
             </div>
         </section>
 
@@ -75,38 +55,9 @@
             <p class="section-kicker">03 / STACK TECNOLOGICO</p>
             <h2 id="skills-title">Competencias tecnicas</h2>
             <div class="cards-grid skills-grid">
-                <article class="content-card">
-                    <h3>Backend &amp; lenguajes</h3>
-                    <div class="tags">
-                        <span>C#</span><span>TypeScript</span><span>Go</span><span>Python</span><span>ASP.NET
-                            Core</span><span>Nest.JS</span><span>REST APIs</span>
-                    </div>
-                </article>
-                <article class="content-card">
-                    <h3>Frontend &amp; UI</h3>
-                    <div class="tags">
-                        <span>Angular</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>Angular
-                            Material</span>
-                    </div>
-                </article>
-                <article class="content-card">
-                    <h3>Bases de datos</h3>
-                    <div class="tags"><span>SQL
-                            Server</span><span>Oracle</span><span>PostgreSQL</span><span>MySQL</span><span>Query
-                            Optimization</span></div>
-                </article>
-                <article class="content-card">
-                    <h3>DevOps e infraestructura</h3>
-                    <div class="tags green-tags"><span>Docker</span><span>Linux</span><span>Nginx</span><span>GitHub
-                            Actions</span><span>UFW</span></div>
-                </article>
-                <article class="content-card wide-card">
-                    <h3>IA &amp; agentes inteligentes</h3>
-                    <div class="tags violet-tags">
-                        <span>LangChain</span><span>LangGraph</span><span>RAG</span><span>Prompt
-                            Engineering</span><span>LLM Tool Calling</span><span>Vector Embeddings</span>
-                    </div>
-                </article>
+                @for (skill of skills; track skill.title) {
+                    <app-skill-card [skill]="skill"></app-skill-card>
+                }
             </div>
         </section>
 

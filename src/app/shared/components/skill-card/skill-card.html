@@ -1,0 +1,11 @@
+<article class="skill-card">
+    <div class="card-heading">
+        <i [class]="iconClass"></i>
+        <h3>{{ skill.title }}</h3>
+    </div>
+    <div class="tags" aria-label="Tecnologías">
+        @for (technology of skill.technologies; track technology) {
+            <span>{{ technology }}</span>
+        }
+    </div>
+</article>
