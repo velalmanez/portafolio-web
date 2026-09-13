@@ -3,6 +3,9 @@
         <i [class]="iconClass"></i>
         <h3>{{ skill.title }}</h3>
     </div>
+    @if (skill.description) {
+        <p class="skill-description">{{ skill.description }}</p>
+    }
     <div class="tags" aria-label="Tecnologías">
         @for (technology of skill.technologies; track technology) {
             <span>{{ technology }}</span>

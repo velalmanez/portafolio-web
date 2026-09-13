@@ -1,95 +1,157 @@
 <main class="home-page">
-    <div id="portfolio-scrollspy" data-bs-spy="scroll" data-bs-target="#portfolio-navbar"
-        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-        <section id="inicio" class="portfolio-section hero-section" aria-labelledby="home-title">
-            <div class="section-grid hero-grid">
-                <div>
-                    <p class="status-pill"><span></span> INGENIERO EN COMPUTACIÓN &amp; FULL STACK DEVELOPER</p>
-                    <p class="eyebrow">Hola, soy</p>
-                    <h1 id="home-title">Aleks Ivan<br>Velazquez Arriaga</h1>
-                    <p class="intro">Ingeniero en Computación con más de 2 años de experiencia desarrollando
-                        aplicaciones empresariales utilizando <strong>.NET, Angular, SQL Server y Go</strong>.
-                        Especializado en modernización de sistemas legacy, backend de alto rendimiento, infraestructura
-                        Linux/Docker e integración de soluciones avanzadas con <span class="highlight">Inteligencia
-                            Artificial (LangChain y LangGraph).</span></p>
-                    <div class="action-row">
-                        <a class="button button-primary" href="#proyectos">Ver proyectos
-                            <span aria-hidden="true" class="arrow-icon">&#8594;
-                            </span>
-                        </a>
-                        <a class="button button-secondary" [href]="cvUrl" [download]="fuileNameDownloadCV">Descargar CV
-                            PDF
-                        </a>
-                        <div class="social-media" aria-label="Redes sociales">
-                            <a [href]="githubUrl" aria-label="Perfil de GitHub" rel="noopener noreferrer"
-                                target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
-                            <a [href]="linkedinUrl" aria-label="Perfil de LinkedIn" rel="noopener noreferrer"
-                                target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <app-terminal-card></app-terminal-card>
-                    <app-stats-grid></app-stats-grid>
-                </div>
+  <div
+    id="portfolio-scrollspy"
+    data-bs-spy="scroll"
+    data-bs-target="#portfolio-navbar"
+    data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
+    <section id="inicio" class="portfolio-section hero-section" aria-labelledby="home-title">
+      <div class="section-grid hero-grid">
+        <div>
+          <p class="status-pill">
+            <span></span> INGENIERO EN COMPUTACIÓN &amp; FULL STACK DEVELOPER
+          </p>
+          <p class="eyebrow">Hola, soy</p>
+          <h1 id="home-title">Aleks Ivan<br />Velazquez Arriaga</h1>
+          <p class="intro">
+            Ingeniero en Computación con más de 2 años de experiencia desarrollando aplicaciones
+            empresariales utilizando <strong>.NET, Angular, SQL Server y Go</strong>. Especializado
+            en modernización de sistemas legacy, backend de alto rendimiento, infraestructura
+            Linux/Docker e integración de soluciones avanzadas con
+            <span class="highlight">Inteligencia Artificial (LangChain y LangGraph).</span>
+          </p>
+          <div class="action-row">
+            <a class="button button-primary" href="#proyectos"
+              >Ver proyectos
+              <span aria-hidden="true" class="arrow-icon">&#8594; </span>
+            </a>
+            <a class="button button-secondary" [href]="cvUrl" [download]="fuileNameDownloadCV"
+              >Descargar CV PDF
+            </a>
+            <div class="social-media" aria-label="Redes sociales">
+              <a
+                [href]="githubUrl"
+                aria-label="Perfil de GitHub"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social-icon"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                [href]="linkedinUrl"
+                aria-label="Perfil de LinkedIn"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social-icon"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
-        </section>
+          </div>
+        </div>
+        <div>
+          <app-terminal-card></app-terminal-card>
+          <app-stats-grid></app-stats-grid>
+        </div>
+      </div>
+    </section>
 
-        <section id="experiencia" class="portfolio-section" aria-labelledby="experience-title">
-            <p class="section-kicker">01 / TRAYECTORIA TECNICA</p>
-            <h2 id="experience-title">Experiencia laboral</h2>
-            <app-experience-timeline></app-experience-timeline>
-        </section>
+    <section id="experiencia" class="portfolio-section" aria-labelledby="experience-title">
+      <p class="section-kicker">01 / TRAYECTORIA TECNICA</p>
+      <h2 id="experience-title">Experiencia laboral</h2>
+      <app-experience-timeline></app-experience-timeline>
+    </section>
 
-        <section id="proyectos" class="portfolio-section" aria-labelledby="projects-title">
-            <p class="section-kicker">02 / PORTAFOLIO DE PRODUCCION</p>
-            <h2 id="projects-title">Proyectos &amp; arquitectura</h2>
-            <div class="cards-grid three-columns">
-                @for (project of projects; track project.title) {
-                    <app-project-card [project]="project"></app-project-card>
-                }
+    <section id="proyectos" class="portfolio-section" aria-labelledby="projects-title">
+      <p class="section-kicker">02 / PORTAFOLIO DE PRODUCCION</p>
+      <h2 id="projects-title">Proyectos &amp; arquitectura</h2>
+      <div class="cards-grid three-columns">
+        @for (project of projects; track project.title) {
+          <app-project-card [project]="project"></app-project-card>
+        }
+      </div>
+    </section>
+
+    <section id="skills" class="portfolio-section" aria-labelledby="skills-title">
+      <p class="section-kicker">03 / STACK TECNOLOGICO</p>
+      <h2 id="skills-title">Competencias tecnicas</h2>
+      <p class="section-description">
+        Matriz de herramientas, frameworks y entornos dominados para entrega de software end-to-end.
+      </p>
+      <div class="cards-grid skills-grid">
+        @for (skill of skills; track skill.title; let last = $last) {
+          <app-skill-card [skill]="skill" [class.wide-card]="last"></app-skill-card>
+        }
+      </div>
+    </section>
+
+    <section id="educacion" class="portfolio-section" aria-labelledby="education-title">
+      <p class="section-kicker">04 / ACREDITACION Y FORMACION</p>
+      <h2 id="education-title">Educacion &amp; certificaciones</h2>
+      <div class="cards-grid education-grid">
+        <article class="content-card">
+          <div
+            class="bg-surface-card/85 border border-border-subtle rounded-2xl p-space-lg backdrop-blur-md space-y-space-md"
+          >
+            <div class="flex items-start gap-space-sm">
+              <div
+                class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary text-[28px]"
+                  >account_balance</span
+                >
+              </div>
+              <div>
+                <span
+                  class="px-space-xs py-0.5 rounded text-[11px] font-label-code-sm bg-primary/15 text-primary font-semibold"
+                  >Título Universitario</span
+                >
+                <h3 class="font-headline-md text-headline-md font-bold text-text-primary mt-1">
+                  Ingeniería en Computación
+                </h3>
+                <p class="font-body-md text-body-md text-primary font-medium">
+                  Universidad Nacional Autónoma de México (UNAM)
+                </p>
+                <p class="font-body-sm text-body-sm text-text-tertiary">
+                  Facultad de Ingeniería • Periodo 2021 – 2025
+                </p>
+              </div>
             </div>
-        </section>
-
-        <section id="skills" class="portfolio-section" aria-labelledby="skills-title">
-            <p class="section-kicker">03 / STACK TECNOLOGICO</p>
-            <h2 id="skills-title">Competencias tecnicas</h2>
-            <div class="cards-grid skills-grid">
-                @for (skill of skills; track skill.title) {
-                    <app-skill-card [skill]="skill"></app-skill-card>
-                }
-            </div>
-        </section>
-
-        <section id="educacion" class="portfolio-section" aria-labelledby="education-title">
-            <p class="section-kicker">04 / ACREDITACION Y FORMACION</p>
-            <h2 id="education-title">Educacion &amp; certificaciones</h2>
-            <div class="cards-grid education-grid">
-                <article class="content-card">
-                    <h3>Ingenieria en Computacion</h3>
-                    <p class="highlight">Universidad Nacional Autonoma de Mexico (UNAM)</p>
-                    <p>Facultad de Ingenieria · Periodo 2021 - 2025</p>
-                    <hr>
-                    <p>Formacion en estructuras de datos, compiladores, redes, sistemas operativos y arquitectura
-                        distribuida.</p>
-                </article>
-                <article class="content-card">
-                    <h3>Certificaciones oficiales</h3>
-                    <div class="certificate-list"><span>Relational Database Systems</span><span>AWS S3
-                            Basics</span><span>Oracle Database Foundations</span><span>Generative AI in Education</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="contacto" class="portfolio-section contact-section" aria-labelledby="contact-title">
-            <p class="section-kicker">05 / INICIEMOS CONVERSACION</p>
-            <h2 id="contact-title">Construyamos algo util y escalable.</h2>
-            <p>Disponible para roles Full Stack, backend de alto rendimiento, orquestacion de IA y consultoria tecnica.
+            <p
+              class="font-body-sm text-body-sm text-text-secondary border-t border-border-subtle pt-space-sm leading-relaxed"
+            >
+              Formación integral en estructuras de datos avanzadas, teoría de compiladores, redes de
+              computadoras, diseño de sistemas operativos, y metodologías de arquitectura
+              distribuida.
             </p>
-            <div class="contact-links"><a href="mailto:velalmanez@gmail.com">velalmanez@gmail.com</a><a
-                    href="https://wa.me/525637883349" target="_blank" rel="noopener noreferrer">WhatsApp · +52 56 3788
-                    3349</a><span>Estado de Mexico, Mexico</span></div>
-        </section>
-    </div>
+          </div>
+          <app-languages></app-languages>
+        </article>
+
+        <article class="content-card">
+          <app-certificates></app-certificates>
+        </article>
+      </div>
+    </section>
+
+    <section
+      id="contacto"
+      class="portfolio-section contact-section"
+      aria-labelledby="contact-title"
+    >
+      <p class="section-kicker">05 / INICIEMOS CONVERSACION</p>
+      <h2 id="contact-title">Construyamos algo util y escalable.</h2>
+      <p>
+        Disponible para roles Full Stack, backend de alto rendimiento, orquestacion de IA y
+        consultoria tecnica.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:velalmanez@gmail.com">velalmanez@gmail.com</a
+        ><a href="https://wa.me/525637883349" target="_blank" rel="noopener noreferrer"
+          >WhatsApp · +52 56 3788 3349</a
+        ><span>Estado de Mexico, Mexico</span>
+      </div>
+    </section>
+  </div>
 </main>

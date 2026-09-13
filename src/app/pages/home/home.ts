@@ -8,10 +8,12 @@ import { StatsGrid } from '../../shared/components/stats-grid/stats-grid';
 import { ExperienceTimeline } from '../../shared/components/experience-timeline/experience-timeline';
 import { ProjectCard, type Project } from '../../shared/components/project-card/project-card';
 import { SkillCard, type Skill } from '../../shared/components/skill-card/skill-card';
+import { Languages } from '../../shared/components/languages/languages';
+import { Certificates } from '../../shared/components/certificates/certificates';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid, ExperienceTimeline, ProjectCard, SkillCard],
+  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid, ExperienceTimeline, ProjectCard, SkillCard, Languages, Certificates],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -26,26 +28,31 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     {
       icon: 'fas fa-code fa-3',
       title: 'Backend & lenguajes',
+      description: 'Desarrollo de servidores, APIs REST y servicios robustos',
       technologies: ['C#', 'TypeScript', 'Go', 'Python', 'ASP.NET Core', 'Nest.JS', 'REST APIs'],
     },
     {
       icon: 'fas fa-desktop',
       title: 'Frontend & UI',
+      description: 'Interfaces responsivas y experiencias de usuario modernas',
       technologies: ['Angular', 'HTML5', 'CSS3', 'Bootstrap', 'Angular Material'],
     },
     {
       icon: 'fas fa-database',
       title: 'Bases de datos',
+      description: 'Diseño, optimización y gestión de datos empresariales',
       technologies: ['SQL Server', 'Oracle', 'PostgreSQL', 'MySQL', 'Query Optimization'],
     },
     {
       icon: 'fas fa-cloud-upload',
       title: 'DevOps e infraestructura',
+      description: 'Automatización, containerización y despliegues confiables',
       technologies: ['Docker', 'Linux', 'Nginx', 'GitHub Actions', 'UFW'],
     },
     {
       icon: 'fas fa-robot',
       title: 'IA & agentes inteligentes',
+      description: 'Orquestación de agentes autónomos, RAG y soluciones generativas',
       technologies: ['LangChain', 'LangGraph', 'RAG', 'Prompt Engineering', 'LLM Tool Calling', 'Vector Embeddings'],
     },
   ];
