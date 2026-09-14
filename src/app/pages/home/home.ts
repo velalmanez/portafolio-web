@@ -10,10 +10,11 @@ import { ProjectCard, type Project } from '../../shared/components/project-card/
 import { SkillCard, type Skill } from '../../shared/components/skill-card/skill-card';
 import { Languages } from '../../shared/components/languages/languages';
 import { Certificates } from '../../shared/components/certificates/certificates';
+import { Contact } from '../../shared/components/contact/contact';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid, ExperienceTimeline, ProjectCard, SkillCard, Languages, Certificates],
+  imports: [CommonModule, RouterModule, TerminalCard, StatsGrid, ExperienceTimeline, ProjectCard, SkillCard, Languages, Certificates, Contact],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

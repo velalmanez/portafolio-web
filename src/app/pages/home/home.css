@@ -391,3 +391,6 @@ a {
     color: var(--text-color-2);
     font-weight: 700;
 }
+.icon-school{
+    font-size: 7rem;
+}
